@@ -8,12 +8,14 @@ export type ButtonProps = {
   children: ReactNode
   primary?: boolean
   size?: Size
+  icon?: ReactNode
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export function Button ({
   children,
   primary = false,
   size = 'small',
+  icon,
   ...props
 }: ButtonProps) {
   const classNames = [
@@ -24,6 +26,7 @@ export function Button ({
 
   return (
     <button className={classNames} {...props}>
+      {icon && icon}
       {children}
     </button>
   )

@@ -2,6 +2,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Button } from './button'
 
+import { AiOutlineArrowLeft as ArrowIcon } from 'react-icons/ai'
+
 export default {
   title: 'Button',
   component: Button
@@ -36,4 +38,11 @@ export const Large = Story.bind({})
 Large.args = {
   children: 'Large',
   size: 'large'
+}
+
+export const WithIcon = Story.bind({})
+WithIcon.args = {
+  children: 'WithIcon',
+  primary: true,
+  icon: <ArrowIcon />
 }
